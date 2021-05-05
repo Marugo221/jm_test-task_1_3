@@ -118,26 +118,31 @@ body {
 
 .menu-item {
     display: flex;
+    margin-left: 20px;
     flex-shrink: 0;
+    width: 260px;
     height: 38px;
     align-items: center;
-    justify-content: center;
     color: #7E7E82;
+    justify-content: center;
 }
+
+
 
 .services__menu > .menu-item > label {
     display: block;
-    margin-left: 20px;
     user-select: none;
+    text-align: center;
 }
 
-.services__menu > .menu-item > input:checked + label {
+.active {
     background-color: #ffff;
     border: 2px solid #B8FFEC;
     border-radius: 6px;
-    margin-left: 0px;
-    padding: 5px;
-    
+}
+
+.hidden {
+    display: none;
 }
 
 .services__menu > .menu-item > input {
