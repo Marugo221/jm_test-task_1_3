@@ -34,6 +34,7 @@ body {
     text-align: center;
     font-size: 18px;
     background: #fff;
+    width: 230px!important;
 
     /* Center slide text vertically */
     display: -webkit-box;
@@ -96,7 +97,7 @@ body {
 
 
   .swiper-slide {
-      width: 240px!important;
+      width: 220px!important;
       height: 72px;
       background-color: #ffffff;
       border: 2px solid #EAEAEA;
@@ -164,17 +165,25 @@ body {
         display: block;
         position: relative;
         flex-grow: 1;
+        margin-top: 17px;
+        margin-left: 68px;
+    }
+
+    .brands__show>button {
+        border: none;
+        background-color: inherit;
     }
 
     .show__showall {
         position: relative;
+        cursor: pointer;
     }
 
     .show__showall:before {
     position: absolute;
     content: ">>";
-    top: -3px;
-    left: -20px;   
+    top: -5px;
+    left: -10px;   
     color: #41F6D7;
     width: 6px;
     transform: rotate(90deg);
@@ -185,13 +194,14 @@ body {
    .show__hideall {
     display: none;
     position: relative;
+    cursor: pointer;
    }
 
    .show__hideall:before {
     position: absolute;
     content: "<<";
-    top: -3px;
-    left: -20px;   
+    top: -5px;
+    left: -10px;  
     color: #41F6D7;
     width: 6px;
     transform: rotate(90deg);
@@ -200,7 +210,6 @@ body {
    }
 
    .brands__container {
-    padding-left: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
