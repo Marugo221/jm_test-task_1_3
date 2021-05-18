@@ -5,35 +5,34 @@ const swiper = new Swiper('.swiper-container',{
     type: 'bullets',
     clickable: true,
     allowTouchMove: false,
-    cssMode: true,
     freeModeSticky: true,
+    observer: true,
+    followFinger: false,
   },
   breakpoints: {
       // when window width is >= 320px
       320: {
-        slidesPerView: 1.1,
+        slidesPerView: 1.2,
         spaceBetween: 30,
         slidesPerGroup: 1,
       },
 
-      480: {
-        slidesPerView: 1.2,
-        spaceBetween: 10
-      },
-    
-      
-      640: {
-        slidesPerView: 1.5,
-        spaceBetween: 10
-      }
   },
   
 });
 
-if (window.innerWidth > 767) swiper.destroy();
 
 
-  
+window.addEventListener("resize", () => {
+ swiper.pagination.bullets[swiper.pagination.bullets.length-1].style = "display:none";
+  if (window.innerWidth >= 768) {
+    document.querySelector(".swiper-wrapper").style = "transform: translate3d(0px, 0px, 0px)!important; transition-duration: 0ms;"
+  }
+})
+
+
+
+
   /*----------------------*/
 
   let show = document.querySelector(".show__showall");
@@ -53,3 +52,4 @@ if (window.innerWidth > 767) swiper.destroy();
     show.style = "display:block";
     hide.style = "display:none";
   });
+

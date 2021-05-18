@@ -54,7 +54,7 @@ body {
       margin: 0;
       height: 80px;
       min-width: 320px;
-      background: linear-gradient(to right,#F8F8F8 15%,#FFFFFF 100% );
+      background: linear-gradient(to right,#F8F8F8 25%,#FFFFFF 100% );
       padding: 16px;
    }
 
@@ -113,8 +113,9 @@ body {
   }
 
   .brands__show {
+    position: relative;
     margin-bottom: 24px;
-        margin-left: 55px;
+    margin-left: 55px;
     display: none;
 }
 
@@ -142,7 +143,6 @@ body {
         margin-left: auto;
         margin-right: auto;
         position: relative;
-       
         list-style: none;
         padding: 0;
         z-index: 1;
@@ -152,7 +152,6 @@ body {
     .brands-slide__items {
         justify-content: start;
         height: 195px;
-        width: 900px;
         margin-left: 20px;
         overflow: hidden;
     }
@@ -164,12 +163,17 @@ body {
     .brands__show {
         display: block;
         position: relative;
+        flex-grow: 1;
+    }
+
+    .show__showall {
+        position: relative;
     }
 
     .show__showall:before {
     position: absolute;
     content: ">>";
-    top: -1px;
+    top: -3px;
     left: -20px;   
     color: #41F6D7;
     width: 6px;
@@ -179,14 +183,14 @@ body {
     }
 
    .show__hideall {
-    position: relative;
     display: none;
+    position: relative;
    }
 
    .show__hideall:before {
     position: absolute;
     content: "<<";
-    top: -1px;
+    top: -3px;
     left: -20px;   
     color: #41F6D7;
     width: 6px;
@@ -194,6 +198,15 @@ body {
     font-family: monospace;
     letter-spacing: -2.5px;
    }
+
+   .brands__container {
+    padding-left: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 915px;
+}
+
 
 }
 
@@ -204,18 +217,15 @@ body {
 @media (min-width:1120px) {
 
     .brands__container {
-        padding-left: 50px;
-        display: flex;
-        flex-wrap: wrap;
-    }
+        width: 1225px;   }
 
     .brands-slide__items {
         height: 215px;
-        width: 1030px;
+        width: 1150px;
     }
 
     .brands__show {
-        margin-left: 112px;
+        
     }
 }
         
