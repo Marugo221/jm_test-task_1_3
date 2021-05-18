@@ -166,7 +166,7 @@ body {
         position: relative;
         flex-grow: 1;
         margin-top: 17px;
-        margin-left: 68px;
+        margin-left: 48px;
     }
 
     .brands__show>button {
@@ -226,11 +226,12 @@ body {
 @media (min-width:1120px) {
 
     .brands__container {
-        width: 1225px;   }
+        width: 1070px;  
+    }
 
     .brands-slide__items {
         height: 215px;
-        width: 1150px;
+        width: 1040px;
     }
 
     .brands__show {
